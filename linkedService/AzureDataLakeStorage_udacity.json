@@ -1,0 +1,14 @@
+{
+    "name": "AzureDataLakeStorage_udacity",
+    "properties": {
+        "annotations": [],
+        "type": "AzureBlobFS",
+        "typeProperties": {
+            "url": "https://heiaepvn001dwedls01.dfs.core.windows.net/"
+        },
+        "connectVia": {
+            "referenceName": "LinkedIntegrationRuntime-WE",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

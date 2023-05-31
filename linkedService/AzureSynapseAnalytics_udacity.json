@@ -1,0 +1,14 @@
+{
+    "name": "AzureSynapseAnalytics_udacity",
+    "properties": {
+        "annotations": [],
+        "type": "AzureSqlDW",
+        "typeProperties": {
+            "connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=hei-aep-vn001-d-we-syn-01.sql.azuresynapse.net;Initial Catalog=udacity"
+        },
+        "connectVia": {
+            "referenceName": "AutoResolveIntegrationRuntime",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

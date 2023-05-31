@@ -1,0 +1,47 @@
+{
+    "name": "Aggregate pipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "Aggregate pipeline",
+                "type": "ExecuteDataFlow",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "dataflow": {
+                        "referenceName": "AggregateFlow",
+                        "type": "DataFlowReference",
+                        "parameters": {
+                            "dataflow_param_fiscalyear": "2020"
+                        }
+                    },
+                    "staging": {
+                        "linkedService": {
+                            "referenceName": "AzureDataLakeStorage_udacity",
+                            "type": "LinkedServiceReference"
+                        },
+                        "folderPath": "dirstaging"
+                    },
+                    "compute": {
+                        "coreCount": 8,
+                        "computeType": "General"
+                    },
+                    "traceLevel": "Fine"
+                }
+            }
+        ],
+        "folder": {
+            "name": "Udacity"
+        },
+        "annotations": [],
+        "lastPublishTime": "2022-11-03T17:47:58Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

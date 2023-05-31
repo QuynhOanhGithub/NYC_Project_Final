@@ -1,0 +1,103 @@
+{
+    "name": "historycal_data",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureDataLakeStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Udacity"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "nycpayroll_2020.csv",
+                "fileSystem": "dirhistoryfiles"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": [
+            {
+                "name": "FiscalYear",
+                "type": "int"
+            },
+            {
+                "name": "PayrollNumber",
+                "type": "int"
+            },
+            {
+                "name": "AgencyID",
+                "type": "varchar"
+            },
+            {
+                "name": "AgencyName",
+                "type": "varchar"
+            },
+            {
+                "name": "EmployeeID",
+                "type": "varchar"
+            },
+            {
+                "name": "LastName",
+                "type": "varchar"
+            },
+            {
+                "name": "FirstName",
+                "type": "varchar"
+            },
+            {
+                "name": "AgencyStartDate",
+                "type": "date"
+            },
+            {
+                "name": "WorkLocationBorough",
+                "type": "varchar"
+            },
+            {
+                "name": "TitleCode",
+                "type": "varchar"
+            },
+            {
+                "name": "TitleDescription",
+                "type": "varchar"
+            },
+            {
+                "name": "LeaveStatusasofJune30",
+                "type": "varchar"
+            },
+            {
+                "name": "BaseSalary",
+                "type": "float"
+            },
+            {
+                "name": "PayBasis",
+                "type": "varchar"
+            },
+            {
+                "name": "RegularHours",
+                "type": "float"
+            },
+            {
+                "name": "RegularGrossPaid",
+                "type": "float"
+            },
+            {
+                "name": "OTHours",
+                "type": "float"
+            },
+            {
+                "name": "TotalOTPaid",
+                "type": "float"
+            },
+            {
+                "name": "TotalOtherPay",
+                "type": "float"
+            }
+        ]
+    }
+}

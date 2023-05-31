@@ -1,0 +1,12 @@
+{
+    "name": "LinkedIntegrationRuntime-WE",
+    "properties": {
+        "type": "SelfHosted",
+        "typeProperties": {
+            "linkedInfo": {
+                "resourceId": "/subscriptions/3b7d32c7-0d93-4d95-8463-aa76956cca95/resourcegroups/HEI-AEP-AEP03-P-WE-RG-SHADF-01/providers/Microsoft.DataFactory/factories/hei-aep-aep03-P-we-adf-shadf-01/integrationruntimes/SelfHostedIntegrationRuntime",
+                "authorizationType": "Rbac"
+            }
+        }
+    }
+}

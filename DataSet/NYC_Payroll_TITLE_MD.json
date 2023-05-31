@@ -1,0 +1,28 @@
+{
+    "name": "NYC_Payroll_TITLE_MD",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureSynapseAnalytics_udacity",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "Udacity"
+        },
+        "annotations": [],
+        "type": "AzureSqlDWTable",
+        "schema": [
+            {
+                "name": "TitleCode",
+                "type": "varchar"
+            },
+            {
+                "name": "TitleDescription",
+                "type": "varchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "NYC_Payroll_TITLE_MD"
+        }
+    }
+}

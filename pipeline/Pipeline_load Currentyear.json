@@ -1,0 +1,42 @@
+{
+    "name": "Pipeline_load Currentyear",
+    "properties": {
+        "activities": [
+            {
+                "name": "DataFlow for Current Year Data",
+                "type": "ExecuteDataFlow",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "dataflow": {
+                        "referenceName": "dataflow2021data",
+                        "type": "DataFlowReference"
+                    },
+                    "staging": {
+                        "linkedService": {
+                            "referenceName": "AzureDataLakeStorage_udacity",
+                            "type": "LinkedServiceReference"
+                        },
+                        "folderPath": "dirstaging"
+                    },
+                    "compute": {
+                        "coreCount": 8,
+                        "computeType": "General"
+                    },
+                    "traceLevel": "Fine"
+                }
+            }
+        ],
+        "folder": {
+            "name": "Udacity"
+        },
+        "annotations": []
+    }
+}
